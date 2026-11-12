@@ -1,0 +1,65 @@
+:root{--navy:#14213d;--teal:#0f766e;--teal-dark:#0b5d57;--amber:#f2a541;--ink:#1b2433;--muted:#5b6b7c;
+--bg:#ffffff;--alt:#f4f6f8;--line:#d9e0e6;--teal-bg:#e3f1ef;--error:#b4532a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:720px}
+.center{text-align:center}
+a{color:var(--teal)}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.12;margin:0 0 16px;color:var(--navy);letter-spacing:-.01em}
+h2{font-size:clamp(24px,3vw,32px);line-height:1.2;margin:0 0 24px;color:var(--navy)}
+h3{font-size:20px;line-height:1.3;margin:0 0 8px;color:var(--navy)}
+p{margin:0 0 14px}
+.top{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:5}
+.bar{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:21px;color:var(--navy);text-decoration:none}
+.mark{width:22px;height:22px;background:var(--teal);clip-path:polygon(50% 0,100% 100%,0 100%);display:inline-block}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-left:auto}
+nav a{color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover,nav a:focus-visible{color:var(--teal);text-decoration:underline}
+.btn{display:inline-block;background:var(--teal);color:#fff;border:2px solid var(--teal);border-radius:10px;
+padding:12px 20px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover,.btn:focus-visible{background:var(--teal-dark);border-color:var(--teal-dark)}
+.btn.ghost{background:transparent;color:var(--teal)}
+.btn.ghost:hover,.btn.ghost:focus-visible{background:var(--teal-bg)}
+.btn.small{padding:8px 14px;font-size:15px}
+.btn[disabled]{opacity:.6;cursor:wait}
+.hero{background:linear-gradient(180deg,#f4f6f8 0,#fff 100%);padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;margin:0 0 12px}
+.lede{font-size:20px;color:var(--muted);max-width:720px}
+.center .lede{margin-left:auto;margin-right:auto}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.center .cta,.cta.center{justify-content:center}
+section{padding:56px 0}
+section.alt{background:var(--alt)}
+.grid{display:grid;gap:18px}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.four{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:1fr}}
+@media (max-width:640px){.two,.four{grid-template-columns:1fr}nav{margin-left:0;width:100%;order:3}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.card p{color:var(--muted);margin:0}
+.card.link{text-decoration:none;color:inherit;display:block}
+.card.link:hover,.card.link:focus-visible{border-color:var(--teal);box-shadow:0 2px 14px rgba(15,118,110,.12)}
+.more{display:inline-block;margin-top:12px;color:var(--teal);font-weight:600}
+.num{font-size:34px;font-weight:700;color:var(--teal);margin:0 0 6px}
+.prose p{font-size:18.5px}
+.callout{margin-top:32px;background:var(--teal-bg);border-color:var(--teal)}
+.form .row{margin-bottom:16px}
+label{display:block;font-weight:600;margin-bottom:6px}
+.req{color:var(--error)}
+input[type=text],input[type=email],select,textarea{width:100%;padding:11px 12px;border:1px solid #b8c3cd;border-radius:9px;
+font:inherit;color:var(--ink);background:#fff}
+input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.check{font-weight:400;display:flex;gap:10px;align-items:flex-start}
+.check input{margin-top:6px;width:18px;height:18px}
+.note{font-size:14.5px;color:var(--muted)}
+.status{margin:14px 0 0;font-weight:600}
+.status.ok{color:var(--teal)}
+.status.err{color:var(--error)}
+footer{background:var(--navy);color:#c9d3df;padding:32px 0;font-size:15px}
+footer a{color:#fff}
+footer strong{color:#fff}
+footer .links{margin:0}
