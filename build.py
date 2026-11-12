@@ -122,7 +122,7 @@ def page(path, title, body, lede=""):
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="notice"><div class="wrap">Demonstration site for a portfolio project. Tallpine is a made-up company. <a href="{up}about/index.html">About this site</a></div></div>
+<div class="notice"><div class="wrap">Demonstration site for a portfolio project. Tallpine is a made-up company. This site identifies visitors where it can. <a href="{up}privacy/index.html">Privacy</a></div></div>
 <header class="top"><div class="wrap bar">
   <a class="brand" href="{up}index.html" aria-label="Tallpine home">{LOGO}<span>Tallpine</span></a>
   <nav aria-label="Main">{nav}</nav>
@@ -145,7 +145,7 @@ def page(path, title, body, lede=""):
   <p class="legal"><strong>Tallpine is a made-up company.</strong> The product, people and customers described on this
   site do not exist. Forms send what you type to a test CRM, so please use made-up details. The site may load a
   visitor-identification script (Swan) that estimates which company a visit comes from and can sometimes match a
-  visit to a person. This project uses only the company and discards anything about a person.
+  visit to a person. Identified visitors may be saved as a contact in a test CRM; nobody is contacted because of a visit.
   See <a href="{up}privacy/index.html">Privacy</a>.</p>
 </div></footer>
 </body>
@@ -292,9 +292,9 @@ def build():
          'out who is writing, chooses a route, drafts a reply from approved wording and sets a one-business-day '
          'deadline. A person approves and sends every reply; nothing is sent automatically.</p>'
          '<p>Second, it gives a visitor-identification script (Swan) real pages to watch. That script estimates which '
-         '<em>company</em> a visit comes from, and it can sometimes match a visit to a person. The engine keeps '
-         'only the company, discards anything about a person, and never sends a message because of a visit '
-         'alone.</p>'
+         '<em>company</em> a visit comes from, and it can sometimes match a visit to a person. For this '
+         'demonstration an identified visitor may be saved as a contact in the test CRM. The engine scores only '
+         'the company, and nobody is ever contacted because of a visit alone.</p>'
          '<p>If you try the forms, please use made-up details.</p></div></section>')
     page("privacy/index.html", "Privacy",
          head("Privacy", "Privacy", "What this demonstration site collects, in plain words.") +
@@ -303,9 +303,12 @@ def build():
          'demonstration. Please enter made-up details. No phone number is asked for or stored.</p>'
          '<h2>Visitor identification</h2><p>The site loads a script from Swan, a visitor-identification service. '
          'It estimates which company a visit comes from, based on the network the visit arrives through, and for '
-         'some visits it can also match a person. This project uses only the company name and the pages visited: '
-         'any detail about an individual is discarded before anything is stored or scored, and nobody is '
-         'contacted because of a visit.</p>'
+         'some visits (mainly in the United States) it can also match a person: a name, job title, work email and '
+         'LinkedIn profile. For this demonstration an identified visitor may be saved as a contact in a HubSpot '
+         'test account. Scoring uses only the company and the pages visited, and nobody is contacted because of '
+         'a visit.</p>'
+         '<h2>Having your details removed</h2><p>If you visited this site and want any record of you deleted, '
+         'say so through the <a href="../contact/index.html">contact form</a> and it will be removed.</p>'
          '<h2>No marketing</h2><p>Nobody is added to a mailing list, and no message is ever sent because of a visit.</p>'
          '<h2>Questions</h2><p>Use the <a href="../contact/index.html">contact form</a>.</p></div></section>')
 
