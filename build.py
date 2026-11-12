@@ -144,7 +144,8 @@ def page(path, title, body, lede=""):
   </div>
   <p class="legal"><strong>Tallpine is a made-up company.</strong> The product, people and customers described on this
   site do not exist. Forms send what you type to a test CRM, so please use made-up details. The site may load a
-  visitor-identification script that estimates which company a visit comes from; it does not identify individuals.
+  visitor-identification script (Swan) that estimates which company a visit comes from and can sometimes match a
+  visit to a person. This project uses only the company and discards anything about a person.
   See <a href="{up}privacy/index.html">Privacy</a>.</p>
 </div></footer>
 </body>
@@ -290,19 +291,21 @@ def build():
          '<p>The site has two jobs. First, its forms send what you type to a test CRM, where an inbound engine works '
          'out who is writing, chooses a route, drafts a reply from approved wording and sets a one-business-day '
          'deadline. A person approves and sends every reply; nothing is sent automatically.</p>'
-         '<p>Second, it gives a visitor-identification script real pages to watch. That script estimates which '
-         '<em>company</em> a visit comes from. The engine keeps only the company, never a person, and it never '
-         'sends a message because of a visit alone.</p>'
+         '<p>Second, it gives a visitor-identification script (Swan) real pages to watch. That script estimates which '
+         '<em>company</em> a visit comes from, and it can sometimes match a visit to a person. The engine keeps '
+         'only the company, discards anything about a person, and never sends a message because of a visit '
+         'alone.</p>'
          '<p>If you try the forms, please use made-up details.</p></div></section>')
     page("privacy/index.html", "Privacy",
          head("Privacy", "Privacy", "What this demonstration site collects, in plain words.") +
          '<section><div class="wrap narrow prose">'
          '<h2>Forms</h2><p>What you type into a form is sent to a HubSpot test account used only for this '
          'demonstration. Please enter made-up details. No phone number is asked for or stored.</p>'
-         '<h2>Visitor identification</h2><p>The site may load a script from Swan that estimates which company a '
-         'visit comes from, based on the network the visit arrives through. It is an estimate about an organization. '
-         'The project keeps only the company name and the pages visited; any detail about an individual is '
-         'discarded before anything is stored or scored.</p>'
+         '<h2>Visitor identification</h2><p>The site loads a script from Swan, a visitor-identification service. '
+         'It estimates which company a visit comes from, based on the network the visit arrives through, and for '
+         'some visits it can also match a person. This project uses only the company name and the pages visited: '
+         'any detail about an individual is discarded before anything is stored or scored, and nobody is '
+         'contacted because of a visit.</p>'
          '<h2>No marketing</h2><p>Nobody is added to a mailing list, and no message is ever sent because of a visit.</p>'
          '<h2>Questions</h2><p>Use the <a href="../contact/index.html">contact form</a>.</p></div></section>')
 
